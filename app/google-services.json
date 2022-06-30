@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "375954149699",
+    "project_id": "sibgatapartaments",
+    "storage_bucket": "sibgatapartaments.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375954149699:android:7b4671839dbc6e190adff6",
+        "android_client_info": {
+          "package_name": "com.example.mainactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375954149699-ulseah2c086q0it6rbt8v9p1ehfd65oc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mainactivity",
+            "certificate_hash": "76e700ccfb11c8e6b589b99452d85b9947733aae"
+          }
+        },
+        {
+          "client_id": "375954149699-4v1k5gg9p5emdm1pjm4r6nn563u4qqgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnv1jvjJM8_qYMEmfRIZ-AZF-AGe_urwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375954149699-4v1k5gg9p5emdm1pjm4r6nn563u4qqgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

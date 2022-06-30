@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@color/blue_logo"
+    android:id="@+id/idRLBottom"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apartament_name"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:id="@+id/idTVApartamentName"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="4dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/idTVApartamentName"
+        android:padding="4dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/idTVApartamentImg"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apartament_description"
+        android:id="@+id/idTVApartamentDesc"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:layout_below="@id/idTVApartamentAddress"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apartament_type"
+        android:id="@+id/idTVApartamentType"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:layout_below="@id/idTVApartamentImg"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        android:textSize="25sp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/apartament_address"
+        android:id="@+id/idTVApartamentAddress"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:layout_below="@id/idTVApartamentType"
+        android:padding="3dp"
+        android:layout_margin="4dp"
+        android:textSize="25sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/idTVApartamentDesc"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/button_edit_apartament"
+            android:textAllCaps="false"
+            android:id="@+id/btnEdit"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/button_view_details"
+            android:textAllCaps="false"
+            android:id="@+id/btnViewDetails"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

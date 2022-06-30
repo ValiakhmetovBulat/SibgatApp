@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MainActivity</string>
+    <string name="app_in_name">Sibgat Apartaments</string>
+    <string name="app_name_after">Register App</string>
+    <string name="btnSignIn">Войти</string>
+    <string name="btnRegister">Зарегистрироваться</string>
+    <string name="logo">logo</string>
+    <string name="sibgat_bg">sibgat_bg</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Пароль</string>
+    <string name="name_text">Имя</string>
+    <string name="phone_text">Телефон</string>
+    <string name="apartament_type">Тип апартаментов</string>
+    <string name="apartament_address">Адрес апартаментов</string>
+    <string name="apartament_name">Название апартаментов</string>
+    <string name="apartament_image">Ссылка на картинку</string>
+    <string name="apartament_description">Описание апартаментов</string>
+    <string name="add_apartament_button_text">Добавить</string>
+    <string name="update_apartament_button">Обновить</string>
+    <string name="button_delete_apartament">Удалить</string>
+    <string name="add">add</string>
+    <string name="button_edit_apartament">Изменить</string>
+    <string name="button_view_details">Показать детали</string>
+    <string name="log_out">Log Out</string>
+</resources>

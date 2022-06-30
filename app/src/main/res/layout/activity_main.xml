@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/root_element"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:paddingTop="50sp"
+        android:paddingBottom="50sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/sibgat_logo"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/logo">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400sp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/sibgat_bg"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/black_light">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_gravity="center"
+        android:id="@+id/prgBarLoadingMain"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30sp"
+            android:background="@drawable/btn_sign_in"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="@string/btnSignIn"
+            android:textColor="@color/black">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRegister"
+            android:layout_width="225sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_sign_in"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="@string/btnRegister"
+            android:textColor="@color/black">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+</LinearLayout>
