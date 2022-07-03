@@ -110,15 +110,30 @@ public class MainActivity extends AppCompatActivity {
 
                 prgBarLoading.setVisibility(View.VISIBLE);
                 // авторизация
-                auth.signInWithEmailAndPassword(
-                        email.getText().toString(),
-                        password.getText().toString()
-                )
-                        //при успешном входе
+                Authorize(email.getText().toString(), password.getText().toString());
+
+            }
+        });
+
+        dialog.show();
+        prgBarLoading.setVisibility(View.GONE);
+    }
+
+    public void Authorize(String email, String password) {
+
+        auth.signInWithEmailAndPassword(email, password)
+                //при успешном входе
                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(AuthResult authResult) {
-                        startActivity(new Intent(MainActivity.this, ApartamentListActivity.class));
+                        if (email.equals("valiaxmetovb134@gmail.com"))
+                        {
+                            startActivity(new Intent(MainActivity.this, ApartamentListActivity.class));
+                        }
+                        else
+                        {
+                            startActivity(new Intent(MainActivity.this, ApartamentListActivityUser.class));
+                        }
                         finish();
                         Snackbar.make(
                                 root,
@@ -127,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                                 .show();
                     }
                 })
-                        // при ошибке входа
+                // при ошибке входа
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -138,12 +153,6 @@ public class MainActivity extends AppCompatActivity {
                                 .show();
                     }
                 });
-
-            }
-        });
-
-        dialog.show();
-        prgBarLoading.setVisibility(View.GONE);
     }
 
     private void showRegisterWindow() {

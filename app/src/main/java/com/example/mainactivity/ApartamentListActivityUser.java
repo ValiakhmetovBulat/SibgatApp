@@ -31,14 +31,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-import java.net.URI;
 import java.util.ArrayList;
 
-public class ApartamentListActivity extends AppCompatActivity implements ApartamentRVAdapter.IApartamentClick{
+public class ApartamentListActivityUser extends AppCompatActivity implements ApartamentRVAdapter.IApartamentClick {
 
     private RecyclerView apartamentRV;
     private ProgressBar pgBarLoading;
-    private FloatingActionButton addFAB;
     private FirebaseDatabase db;
     private DatabaseReference databaseReference;
     private ArrayList<Apartament> apartamentArrayList;
@@ -53,11 +51,10 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
         setTitle("Список апартаментов");
         getSupportActionBar().show();
 
-        setContentView(R.layout.apartament_list_window);
+        setContentView(R.layout.activity_apartament_list_user);
 
         apartamentRV = findViewById(R.id.IdRV);
         pgBarLoading = findViewById(R.id.prggBarLoading);
-        addFAB = findViewById(R.id.fabAdd);
         db = FirebaseDatabase.getInstance();
         databaseReference = db.getReference("Apartaments");
 
@@ -71,13 +68,6 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
 
         apartamentRV.setLayoutManager(new LinearLayoutManager(this));
         apartamentRV.setAdapter(apartamentRVAdapter);
-
-        addFAB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ApartamentListActivity.this, AddApartamentActivity.class));
-            }
-        });
 
         getAllApartaments();
     }
@@ -131,7 +121,7 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
     private void displayBottomSheet(Apartament apartament) {
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_dialog, bottomSheetRL);
+        View layout = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_dialog_user, bottomSheetRL);
 
         bottomSheetDialog.setContentView(layout);
         bottomSheetDialog.setCancelable(false);
@@ -143,7 +133,6 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
         TextView apartamentTypeTV = layout.findViewById(R.id.idTVApartamentType);
         TextView apartamentAddressTV = layout.findViewById(R.id.idTVApartamentAddress);
         TextView apartamentDescTV = layout.findViewById(R.id.idTVApartamentDesc);
-        Button editBtn = layout.findViewById(R.id.btnEdit);
         Button showDetailsBtn = layout.findViewById(R.id.btnViewDetails);
 
         apartamentNameTV.setText(apartament.getApartamentName());
@@ -151,17 +140,6 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
         apartamentTypeTV.setText(apartament.getApartamentType());
         apartamentAddressTV.setText(apartament.getApartamentAddress());
         apartamentDescTV.setText(apartament.getApartamentDescription());
-
-        editBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(ApartamentListActivity.this, EditApartamentActivity.class);
-                i.putExtra("apartament", apartament);
-
-                startActivity(i);
-            }
-        });
 
         showDetailsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,7 +169,7 @@ public class ApartamentListActivity extends AppCompatActivity implements Apartam
             case R.id.idLogOut:
                 Toast.makeText(this, "Пользователь вышел из системы", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
-                Intent i = new Intent(ApartamentListActivity.this, MainActivity.class);
+                Intent i = new Intent(ApartamentListActivityUser.this, MainActivity.class);
                 startActivity(i);
                 this.finish();
                 return true;

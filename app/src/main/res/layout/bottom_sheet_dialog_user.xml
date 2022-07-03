@@ -77,22 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2"
         android:layout_below="@id/idTVApartamentDesc"
         >
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="4dp"
-            android:text="@string/button_edit_apartament"
-            android:textAllCaps="false"
-            android:id="@+id/btnEdit"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            android:textSize="16sp"
-            />
 
         <Button
             android:layout_width="0dp"
